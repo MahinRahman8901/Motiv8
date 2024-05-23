@@ -1,0 +1,37 @@
+.front-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 20px; /* Add margin to separate buttons from title */
+}
+
+.login-button, .register-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #28a745; /* Green color */
+  color: #fff; /* White text */
+}
+
+.login-button:hover, .register-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
