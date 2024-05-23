@@ -13,10 +13,13 @@ CREATE TABLE app_user(
 
 CREATE TABLE exercise(
     exercise_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    exercise_name VARCHAR(100) NOT NULL,
-    exercise_type VARCHAR(20) NOT NULL,
+    exercise_name VARCHAR(100) UNIQUE NOT NULL,
+    exercise_type VARCHAR(30) NOT NULL,
+    exercise_desc text NOT NULL,
     calories_burnt INT NOT NULL,
-    duration TIME NOT NULL
+    duration TIME NOT NULL,
+    difficulty VARCHAR(15) NOT NULL,
+    muscle_group VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE workout_plan(
@@ -40,17 +43,14 @@ CREATE TABLE workout_plan(
 -- Inserting data into user table
 INSERT INTO app_user (user_name, dob, height, weight, email) 
 VALUES 
-('Alice Smith', '1990-05-15', 165, 65, 'alice@example.com'),
-('Bob Johnson', '1985-08-22', 180, 85, 'bob@example.com');
+('Smith101', '1990-05-15', 165, 65, 'alice@example.com');
 
 -- Inserting data into exercise table
-INSERT INTO exercise (exercise_name, exercise_type, calories_burnt, duration) 
+INSERT INTO exercise (exercise_name, exercise_type, exercise_desc, calories_burnt, duration, difficulty, muscle_group) 
 VALUES 
-('Running', 'Cardio', 500, '00:30:00'),
-('Bench Press', 'Strength', 300, '00:20:00');
+('Running', 'Cardio', 'Run straight homie', 500, '00:30:00', 'intermediate', 'quadriceps');
 
 -- Inserting data into workout_plan table
 INSERT INTO workout_plan (workout_name, workout_desc, user_id, exercise_1_id) 
 VALUES 
-('Morning Cardio', 'Light cardio workout', 1, 1),
-('Strength Session', 'Bench press for chest strength.', 2, 2);
+('Morning Cardio', 'Light cardio workout', 1, 1);

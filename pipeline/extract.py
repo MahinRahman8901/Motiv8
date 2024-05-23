@@ -8,7 +8,7 @@ Python script for extracting exercise and calories burnt data
 # TODO: transform will include calculating calories burnt given a time duration
 # TODO: create visualizations for dataset
 # TODO: create login system (look at weather API from dom)
-# TODO: take the workout instructions and make GPT briefly describe the workout plan.
+# TODO: update extract to return more than 1 exercise, pick from a list and upload that to database
 
 from os import environ as ENV
 
