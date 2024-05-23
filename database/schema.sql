@@ -25,8 +25,16 @@ CREATE TABLE workout_plan(
     workout_desc TEXT NOT NULL,
     user_id BIGINT,
         FOREIGN KEY (user_id) REFERENCES app_user(user_id),
-    exercise_id INT NOT NULL,
-        FOREIGN KEY (exercise_id) REFERENCES exercise(exercise_id)
+    exercise_1_id INT NOT NULL,
+        FOREIGN KEY (exercise_1_id) REFERENCES exercise(exercise_id),
+    exercise_2_id INT,
+        FOREIGN KEY (exercise_2_id) REFERENCES exercise(exercise_id),
+    exercise_3_id INT,
+        FOREIGN KEY (exercise_3_id) REFERENCES exercise(exercise_id),
+    exercise_4_id INT,
+        FOREIGN KEY (exercise_4_id) REFERENCES exercise(exercise_id),
+    exercise_5_id INT,
+        FOREIGN KEY (exercise_5_id) REFERENCES exercise(exercise_id)
 );
 
 -- Inserting data into user table
@@ -42,7 +50,7 @@ VALUES
 ('Bench Press', 'Strength', 300, '00:20:00');
 
 -- Inserting data into workout_plan table
-INSERT INTO workout_plan (workout_name, workout_desc, user_id, exercise_id) 
+INSERT INTO workout_plan (workout_name, workout_desc, user_id, exercise_1_id) 
 VALUES 
-('Morning Cardio', '30 minutes of running at moderate pace.', 1, 1),
+('Morning Cardio', 'Light cardio workout', 1, 1),
 ('Strength Session', 'Bench press for chest strength.', 2, 2);
