@@ -8,7 +8,7 @@ from datetime import timedelta
 from dotenv import load_dotenv
 
 from psycopg2 import connect, OperationalError
-from psycopg2.extras import execute_values, RealDictCursor
+from psycopg2.extras import RealDictCursor
 from transform import get_full_workout
 
 
