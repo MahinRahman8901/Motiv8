@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './FrontPage.css';
 
 const FrontPage = () => {
@@ -6,8 +7,8 @@ const FrontPage = () => {
     <div className="front-page">
       <h1>MOTIV8</h1>
       <div className="button-container">
-        <button className="login-button">Login</button>
-        <button className="register-button">Register</button>
+        <Link to="/login" className="login-button">Login</Link>
+        <Link to="/register" className="register-button">Register</Link>
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ h1 {
 
 .button-container {
   display: flex;
-  margin-top: 20px; /* Add margin to separate buttons from title */
+  margin-top: 20px;
 }
 
 .login-button, .register-button {
@@ -29,7 +29,10 @@ h1 {
   cursor: pointer;
   transition: background-color 0.3s ease;
   background-color: #28a745; /* Green color */
-  color: #fff; /* White text */
+  color: #fff;
+  text-decoration: none; /* Remove underline from Link */
+  display: inline-block; /* Ensure buttons are block elements */
+  text-align: center; /* Center text within Link */
 }
 
 .login-button:hover, .register-button:hover {
